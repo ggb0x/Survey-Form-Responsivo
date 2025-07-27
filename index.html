@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Formulário</title>
+    </head>
+    <body>
+        <h1 id="title">Bem-Vindo ao Virtusia</h1>
+        <p id="description"><i>Obrigado por usar o nosso app!</i></p>
+        
+        <form id="survey-form">
+            <p class='pedido'>Por favor, preencha o formulário abaixo corretamente.</p>
+            
+            <div class="name">
+                <label id="name-label" for="name-label">Insira seu nome:
+                    <input id="name" type="text" required placeholder="Insira seu nome aqui">
+                </label>
+            </div>
+            
+            <div class="email">
+                <label id="email-label" for="email-label">Insira seu e-mail:
+                    <input id="email" type="email" required placeholder="example@virtusia.com">
+                </label>
+            </div>
+            
+            <div class="number">
+                <label id="number-label" for="number">Insira a sua idade:
+                    <input id="number" type="number" required min="14" max="140" placeholder="Idade...">
+                </label>
+            </div>
+            
+            <p class="how">Como nos conheceu?</p>
+            <label for="dropdown">
+                <select id="dropdown" required>
+                    <option value="" id="null">Selecione uma opção</option>
+                    <option value="1" id="1">YouTube</option>
+                    <option value="2" id="2">Instagram</option>
+                    <option value="3" id="3">Vídeos curtos</option>
+                    <option value="4" id="4">Outros...</option>
+                </select>
+            </label>
+            
+            <p>Qual o seu objetivo com o Virtusia?</p>
+            <div class="radio-options">
+                <div class="radio">
+                    <label>
+                        <input type="radio" required name="objetivo" value="1"> Emagrecer
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" required name="objetivo" value="2"> Ganhar peso
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" required name="objetivo" value="3"> Ganhar massa muscular
+                    </label>
+                </div>
+            </div>
+            
+            <div class="refeicoes">
+                <p class="question">Quais refeições você geralmente não pula?</p>
+                <div class="square">
+                    <label>
+                        <input type="checkbox" name="refeicoes" value="1" required> Café da Manhã
+                    </label>
+                </div>
+                <div class="square">
+                    <label>
+                        <input type="checkbox" name="refeicoes" value="2" required> Almoço
+                    </label>
+                </div>
+                <div class="square">
+                    <label>
+                        <input type="checkbox" name="refeicoes" value="3" required> Café da Tarde
+                    </label>
+                </div>
+                <div class="square">
+                    <label>
+                        <input type="checkbox" name="refeicoes" value="4" required> Janta
+                    </label>
+                </div>
+            </div>
+            
+            <p>Nos conte mais sobre a sua rotina. Descreva ela com detalhes para que possamos montar um plano personalizado para você com IA.</p>
+            <textarea required placeholder="Insira aqui a sua rotina..."></textarea>
+            
+            <p>Após completar o formulário e preencher todas as áreas corretamente clique no botão abaixo para enviar todas as respostas.</p>
+            <button type="submit" id="submit">Enviar</button>
+        </form>
+    </body>
+</html>
